@@ -50,17 +50,6 @@
 
 $("#id_registrar").click(function (){ 
 	
-	 $.ajax({
-         type: "POST",
-         url: "registraAlumno", 
-         data: $('#id_form').serialize(),
-         success: function(data){
-       	  mostrarMensaje(data.mensaje);
-         },
-         error: function(){
-       	  mostrarMensaje(MSG_ERROR);
-         }
-    });
 
 });
 
