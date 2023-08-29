@@ -15,7 +15,7 @@
 <body>
 
 <div class="container">
-<h1>Registra Concurso</h1>
+<h1>Registra Jugador</h1>
 
 	
 	
