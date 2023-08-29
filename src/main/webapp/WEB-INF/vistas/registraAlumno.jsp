@@ -18,31 +18,7 @@
 <h1>Registra Alumno</h1>
 
 	<form id="id_form"> 
-
-			<div class="form-group">
-				<label class="control-label" for="id_nombre">Nombre</label>
-				<input class="form-control" type="text" id="id_nombre" name="nombre" placeholder="Ingrese el nombre" maxlength="40">    
-			</div>
-			
-			<div class="form-group">
-				<label class="control-label" for="id_dni">DNI</label>
-				<input class="form-control" type="text" id="id_dni" name="dni" placeholder="Ingrese el dni" maxlength="8">    
-			</div>
-			
-			<div class="form-group">
-				<label class="control-label" for="id_correo">Correo</label>
-				<input class="form-control" type="text" id="id_correo" name="correo" placeholder="Ingrese el correo" maxlength="100">    
-			</div>
-			
-			<div class="form-group">
-				<label class="control-label" for="id_fecha">Fecha de Nacimiento</label>
-				<input class="form-control" type="date" id="id_fecha" name="fechaNacimiento" placeholder="Ingrese la fecha" maxlength="100">    
-			</div>
-			
-			
-			<div class="form-group">
-				<button id="id_registrar" type="button" class="btn btn-primary" >Crea Alumno</button>
-			</div>
+		
 	</form>
 </div>
 
