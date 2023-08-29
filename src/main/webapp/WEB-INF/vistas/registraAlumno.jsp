@@ -77,6 +77,8 @@ $("#id_registrar").click(function (){
             data: $('#id_form').serialize(),
             success: function(data){
             	mostrarMensaje(data.MENSAJE);
+            	validator.resetForm();
+            	limpiarFormulario();
             },
             error: function(){
             	mostrarMensaje(data.MSG_ERROR);
@@ -88,7 +90,7 @@ $("#id_registrar").click(function (){
 });
 
 
-function limpiar(){
+function limpiarFormulario(){
 	$('#id_nombre').val('');
 	$('#id_dni').val('');
 	$('#id_correo').val('');
