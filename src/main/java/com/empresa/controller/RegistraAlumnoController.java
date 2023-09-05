@@ -13,20 +13,13 @@ import com.empresa.entity.Alumno;
 import com.empresa.service.AlumnoService;
 
 @Controller
-public class AlumnoController {
+public class RegistraAlumnoController {
 
 	@Autowired
 	private AlumnoService service;
 	
-	@GetMapping(value = "/verAlumno" )
+	@GetMapping(value = "/verRegistraAlumno" )
 	public String verAlumno() {return "registraAlumno";}
-
-	@GetMapping(value = "/verConcurso" )
-	public String verConcurso() {return "registraConcurso";}
-
-	@GetMapping(value = "/verJugador" )
-	public String verJugador() {return "registraJugador";}
-
 
 	@PostMapping("/registraAlumno")
 	@ResponseBody

@@ -15,7 +15,7 @@
 <body>
 
 <div class="container">
-<h1>Registra Alumno</h1>
+<h3>Registra Alumno</h3>
 
 	<form id="id_form"> 
 		<div class="row" style="margin-top: 5%">
