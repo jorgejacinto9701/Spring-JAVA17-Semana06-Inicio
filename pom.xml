@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.empresa</groupId>
-	<artifactId>Spring-JAVA17-Semana02-Inicio</artifactId>
+	<artifactId>Spring-JAVA17-Semana02-Finalizado</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Spring-JAVA17-Semana02-Inicio</name>
+	<name>Spring-JAVA17-Semana02-Finalizado</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>17</java.version>
