@@ -52,7 +52,7 @@ public class RegistraModalidadController {
 	
 	@GetMapping("/buscaPorNombre")
 	@ResponseBody
-	public String validaDni(String nombre) {
+	public String validaNombre(String nombre) {
 		List<Modalidad> lstModalidad = modalidadService.listaPorNombre(nombre);
 		if (CollectionUtils.isEmpty(lstModalidad)) {
 			return "{\"valid\" : true }";
