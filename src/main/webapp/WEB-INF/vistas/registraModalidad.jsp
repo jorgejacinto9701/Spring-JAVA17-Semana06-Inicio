@@ -126,7 +126,7 @@ $('#id_form').bootstrapValidator({
                 },
                 remote :{
             	    delay: 1000,
-            	 	url: 'buscaPorNombre',
+            	 	url: 'buscaPorNombreModalidad',
             	 	message: 'El Nombre ya existe'
              	}
             }

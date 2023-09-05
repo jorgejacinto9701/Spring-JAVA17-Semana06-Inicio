@@ -50,7 +50,7 @@ public class RegistraModalidadController {
 	}
 
 	
-	@GetMapping("/buscaPorNombre")
+	@GetMapping("/buscaPorNombreModalidad")
 	@ResponseBody
 	public String validaNombre(String nombre) {
 		List<Modalidad> lstModalidad = modalidadService.listaPorNombre(nombre);
