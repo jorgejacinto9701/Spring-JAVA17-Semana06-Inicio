@@ -31,8 +31,14 @@
 			</div>
 			<div class="row">
 				<div class="form-group col-md-3">
-					<label class="control-label" for="id_categoria">Categoria</label>
-					<select id="id_categoria" name="categoria.idCategoria" class='form-control'>
+					<label class="control-label" for="id_tipo">Tipo</label>
+					<select id="id_tipo" name="proveedor.idTipo" class='form-control'>
+						<option value=" ">[Seleccione]</option>    
+					</select>
+			    </div>
+			    <div class="form-group col-md-3">
+					<label class="control-label" for="id_pais">País</label>
+					<select id="id_pais" name="pais.idPais" class='form-control'>
 						<option value=" ">[Seleccione]</option>    
 					</select>
 			    </div>
@@ -50,11 +56,18 @@
 
 <script type="text/javascript">
 
-$.getJSON("listaCategoria", {}, function(data){
+$.getJSON("listaTipo", {}, function(data){
 	$.each(data, function(index,item){
-		$("#id_categoria").append("<option value="+item.idCategoria +">"+ item.nombre +"</option>");
+		$("#id_tipo").append("<option value="+item.idTipo +">"+ item.descripcion +"</option>");
 	});
 });
+
+$.getJSON("listaPais", {}, function(data){
+	$.each(data, function(index,item){
+		$("#id_pais").append("<option value="+item.idPais +">"+ item.nombre +"</option>");
+	});
+});
+
 
 $("#id_registrar").click(function (){ 
 
