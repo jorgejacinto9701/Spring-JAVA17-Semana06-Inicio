@@ -32,7 +32,7 @@
 			<div class="row">
 				<div class="form-group col-md-3">
 					<label class="control-label" for="id_tipo">Tipo</label>
-					<select id="id_tipo" name="proveedor.idTipo" class='form-control'>
+					<select id="id_tipo" name="tipo.idTipo" class='form-control'>
 						<option value=" ">[Seleccione]</option>    
 					</select>
 			    </div>
@@ -78,7 +78,7 @@ $("#id_registrar").click(function (){
 		$.ajax({
 			type: 'POST',  
 			data: $("#id_form").serialize(),
-			url: 'registraCliente',
+			url: 'registraProveedor',
 			success: function(data){
 				mostrarMensaje(data.MENSAJE);
 				limpiar();
@@ -94,7 +94,8 @@ $("#id_registrar").click(function (){
 function limpiar(){
 	$("#id_nombre").val('');
 	$("#id_dni").val('');
-	$("#id_categoria").val(' ');
+	$("#id_tipo").val(' ');
+	$("#id_pais").val(' ');
 }
 
 $('#id_form').bootstrapValidator({
@@ -116,12 +117,6 @@ $('#id_form').bootstrapValidator({
                 	min : 5,
                 	max : 100
                 },
-                remote :{
-                	delay   : 1000,
-                	url     : 'buscaPorNombreCliente',
-                	message : 'El nombre ya existe'
-                }
-               
             }
         },
         dni: {
@@ -130,19 +125,21 @@ $('#id_form').bootstrapValidator({
                 notEmpty: {
                     message: 'DNI es un campo obligatorio'
                 },
-                remote :{
-                	delay   : 1000,
-                	url     : 'buscaPorDni',
-                	message : 'El dni ya existe'
-                }
             }
         },
-        
-        categoria: {
-    		selector : '#id_categoria',
+        tipo: {
+    		selector : '#id_tipo',
             validators: {
             	notEmpty: {
-                    message: 'Categoría es un campo obligatorio'
+                    message: 'Tipo es un campo obligatorio'
+                },
+            }
+        },
+        pais: {
+    		selector : '#id_pais',
+            validators: {
+            	notEmpty: {
+                    message: 'País es un campo obligatorio'
                 },
             }
         },
