@@ -268,16 +268,13 @@ function agregarGrilla(lista){
 					return salida;
 				},className:'text-center'},	
 				{data: function(row, type, val, meta){
-				    var salida='<button type="button" style="width: 90px" class="btn btn-warning btn-sm" onclick="eliminar(\'' + row.idModalidad + '\')">Eliminar</button>';
+				    var salida='<button type="button" style="width: 90px" class="btn btn-warning btn-sm" onclick="accionEliminar(\'' + row.idModalidad + '\')">'+ (row.estado == 1? 'Activo':'Inactvo') +  '</button>';
 					return salida;
 				},className:'text-center'},													
 			]                                     
 	    });
 }
 
-function eliminar(id){	
-	mostrarMensajeConfirmacion(MSG_ELIMINAR, accionEliminar,null,id);
-}
 
 function accionEliminar(id){	
     $.ajax({
@@ -286,7 +283,6 @@ function accionEliminar(id){
           data: {"id":id},
           success: function(data){
         	  agregarGrilla(data.lista);
-        	  mostrarMensaje(data.mensaje);
           },
           error: function(){
         	  mostrarMensaje(MSG_ERROR);
