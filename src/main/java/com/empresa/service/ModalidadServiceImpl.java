@@ -24,4 +24,14 @@ public class ModalidadServiceImpl implements ModalidadService{
 		return repository.findByNombreIgnoreCase(nombre);
 	}
 
+	@Override
+	public Modalidad actualizaModalidad(Modalidad obj) {
+		return repository.save(obj);
+	}
+
+	@Override
+	public List<Modalidad> listaPorNombreLike(String nombre) {
+		return repository.findByNombreLike(nombre);
+	}
+
 }

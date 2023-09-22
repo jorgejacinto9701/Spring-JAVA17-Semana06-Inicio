@@ -8,4 +8,6 @@ public interface ModalidadService {
 
 	public abstract Modalidad insertaModalidad(Modalidad obj);
 	public abstract List<Modalidad> listaPorNombre(String nombre);
+	public abstract Modalidad actualizaModalidad(Modalidad obj);
+	public abstract List<Modalidad> listaPorNombreLike(String nombre);
 }
