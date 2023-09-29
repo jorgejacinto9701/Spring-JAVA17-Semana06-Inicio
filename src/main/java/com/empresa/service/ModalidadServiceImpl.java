@@ -40,6 +40,11 @@ public class ModalidadServiceImpl implements ModalidadService{
 		return repository.findById(idModalidad);
 	}
 
+	@Override
+	public List<Modalidad> buscaPorDeporteEnSede(String sede, int idDeporte) {
+		return repository.buscaPorDeporteEnSede(sede, idDeporte);
+	}
+
 
 
 }

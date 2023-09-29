@@ -40,6 +40,15 @@ public class RegistraModalidadController {
 	@ResponseBody
 	public Map<?, ?> registra(Modalidad obj) {
 		HashMap<String, String> map = new HashMap<String, String>();
+		List<Modalidad> lstModalidad = modalidadService.buscaPorDeporteEnSede(
+							obj.getSede(), 
+							obj.getDeporte().getIdDeporte());
+		if (!CollectionUtils.isEmpty(lstModalidad)) {
+			Modalidad objFind = lstModalidad.get(0);
+			map.put("MENSAJE", "Ya existe el deporte " +objFind.getDeporte().getNombre() 
+						+" en la sede " + obj.getSede());
+			return map;
+		}
 		Modalidad objSalida = modalidadService.insertaModalidad(obj);
 		if (objSalida == null) {
 			map.put("MENSAJE", "Error en el registro");
