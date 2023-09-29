@@ -1,4 +1,4 @@
-### CRUD de dos tablas relacionadas en JPA
+### Otras Validaciones
 
 ## Autor ✒️
 
