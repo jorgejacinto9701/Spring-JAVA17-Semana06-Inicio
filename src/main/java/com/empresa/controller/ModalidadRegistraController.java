@@ -17,7 +17,7 @@ import com.empresa.service.DeporteService;
 import com.empresa.service.ModalidadService;
 
 @Controller
-public class RegistraModalidadController {
+public class ModalidadRegistraController {
 
 	@Autowired
 	private DeporteService deporteService;

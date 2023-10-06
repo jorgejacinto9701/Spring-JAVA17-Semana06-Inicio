@@ -13,7 +13,7 @@ import com.empresa.entity.Alumno;
 import com.empresa.service.AlumnoService;
 
 @Controller
-public class RegistraAlumnoController {
+public class AlumnoRegistraController {
 
 	@Autowired
 	private AlumnoService service;

@@ -14,7 +14,7 @@ import com.empresa.entity.Proveedor;
 import com.empresa.service.ProveedorService;
 
 @Controller
-public class RegistraProveedorController {
+public class ProveedorRegistraController {
 
 	@Autowired
 	private ProveedorService proveedorService;

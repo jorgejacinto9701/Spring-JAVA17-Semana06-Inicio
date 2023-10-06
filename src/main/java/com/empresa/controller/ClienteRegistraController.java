@@ -1,4 +1,4 @@
-package com.empresa.controller;
+	package com.empresa.controller;
 
 import java.util.Date;
 import java.util.HashMap;
@@ -18,7 +18,7 @@ import com.empresa.service.CategoriaService;
 import com.empresa.service.ClienteService;
 
 @Controller
-public class RegistraClienteController {
+public class ClienteRegistraController {
 
 	@Autowired
 	private ClienteService clienteService;

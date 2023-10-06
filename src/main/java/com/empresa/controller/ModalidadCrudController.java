@@ -17,7 +17,7 @@ import com.empresa.entity.Modalidad;
 import com.empresa.service.ModalidadService;
 
 @Controller
-public class CrudModalidadController {
+public class ModalidadCrudController {
 
 	@Autowired
 	private ModalidadService modalidadService;
