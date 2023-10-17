@@ -13,7 +13,7 @@ import com.empresa.service.PaisService;
 import com.empresa.service.TipoService;
 
 @Controller
-public class CargaComboController {
+public class UtilController {
 
 	@Autowired
 	private PaisService paisService;
